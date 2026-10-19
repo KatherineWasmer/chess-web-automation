@@ -17,19 +17,6 @@ def get_next_button(my_driver):
     next_button = my_driver.find_element(By.CSS_SELECTOR, '[aria-label = "Next Page"]')
     next_button.click() 
 
-def select_players(players_list) -> list:
-    ''' 
-    Stores the name of one or more players in the chess.com master database 
-    for retrieval. 
-
-    Parameters: 
-    players_list -- Should be a Python list with strings.  
-    
-    Example: 
-    players_list1 = ["Anna Cramling Bellon", "Jose-Raul Capablanca"]
-    '''
-    return players_list
-
 def download_player_games(my_driver, players_list):
     for player in players_list:
         num_names = len(player.split(" "))
