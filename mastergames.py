@@ -1,6 +1,8 @@
 from selenium.webdriver.common.by import By
 import time
 
+# TO-DO: troubleshoot why this script only downloads the first page or doesn't download at all 
+
 def get_total_pages(my_driver):
     return int(my_driver.find_element(By.ID, "master-games-container").get_attribute("data-total-pages"))
 
